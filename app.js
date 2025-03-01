@@ -56,3 +56,48 @@ const apple = "apple";
 const toBuy = ["potato", "tomato", "pizza"]
 toBuy.push("kimchi")
 console.log(toBuy)
+
+
+
+const player = {
+    name: "JH",
+    points: 10,
+    fat: true,
+}
+console.log(player);
+console.log(player.name);
+console.log(player["name"]);
+// object 뒤에 comma(,)를 사용한다 -> property가 하나 더 올 수 있기 때문.
+
+// 추가, 업데이트 가능
+player.fat = false;
+console.log(player);
+
+/**
+ * function이란 뭘까?
+ * -> 내가 계속 반복해서 사용할 수 있는 코드 조각
+ * -> 어떤 코드를 캡슐화해서 실행을 여러 번 할 수 있게 해줌
+ * 반복을 최소한으로 줄이고 효율성 good
+ * 
+ */
+
+function sayHello (nameOfPerson, age) {
+    console.log("Hello my name is " + nameOfPerson + " and I'm " + age);
+}
+
+sayHello("JH", 23);
+sayHello("ning ning", 26);
+
+// argument? function을 실행하는 동안 어떤 정보를 function에게 보낼 수 있는 방법.
+
+
+const player2 = {
+    name: "nico",
+    sayHello2: function(otherPersonsName){
+        console.log("hello! " + otherPersonsName + " nice meet you!");
+    }
+};
+
+console.log(player2.name);
+player2.sayHello2("lynn");
+// function이 object 안에 있을 때만 가능하다.
