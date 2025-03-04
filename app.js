@@ -101,3 +101,80 @@ const player2 = {
 console.log(player2.name);
 player2.sayHello2("lynn");
 // function이 object 안에 있을 때만 가능하다.
+
+
+
+/** 복습time
+ * var 오래된것, 절대로 웬만해서 사용x
+ * 개선하는게 아닌, 그 위에 쌓아가는 방식이다.
+ * 가끔씩 필요하다면 let을 사용할것
+ * 항상 const를 사용해야함.
+ * 
+ */
+
+
+// conditional(조건문): true, false인지 알려줌
+
+// prompt는 사용자에게 입력하는 창을 띄워준다.
+const age = parseInt(prompt("How old are you?"));
+
+// console.log(typeof age );
+// console.log(typeof "15", typeof parseInt("15"));
+
+// 한 type을 받아서 다른 type으로 바꾸는 작업을 할 것
+
+// typeof로 variable의 type을 볼 수 있음
+// parseInt string -> int로 바꿔줌, 숫자만 가능
+// const age = parseInt( "43434" );
+// string인 경우 NaN으로 출력된다.
+
+
+// console.log(age)
+
+/**
+ * isNan
+ * 하나의 인자(argument)를 주면 number인지 아닌지를 알려줌
+ * isNan은 boolean을 반환한다.
+ */
+
+// console.log(isNan(age));
+
+/** 조건문
+ * 
+ * if (condition){
+ * // condition === true
+ * } else {
+ * // condition === false
+ * }
+ */
+
+
+if(isNaN(age) || age < 0) {
+    console.log("Please wrute a number");  
+} else if (age < 18) {
+    console.log("You are too young");
+} else if (age >= 18 && age <= 50){
+    console.log("You can drink");
+} else if (age > 50 && age <= 80) {
+    console.log("You should exercise");
+} else if (age > 80){
+    console.log("You can do whatever you want.")
+}
+// age 함수에서 string을 받아옴.
+// && 둘다 true야지 true가 됨. false가 하나라도 있으면 flase AND연산자.
+
+//  || 둘중 하나만 ture인지 확인해야함, 둘 중 하나만 ture여도 ture가 된다.
+//  둘다 ture이거나 둘다 false이면 flase OR연산자.
+// else는 선택적 사항이다. 꼭 사용해야는 것은 아님.
+
+// AND 연산자
+// true || true === true
+// false || true === true
+// true || false === true
+// false || false === false
+
+// OR 연산자
+// true && true === true
+// false && true === false
+// true && false === false
+// false && false === false
