@@ -295,3 +295,27 @@ h1.addEventListener("click", handleTitleClick);
 
 
 // classList는 class들의 목록으로 작업할 수 있게끔 허용해준다.
+
+
+
+
+/**
+ * const loginForm = document.querySelector("#login-form");
+ * querySelector()를 사용할 때는 대상이 id인지 명확히 해줘야함.
+ * className, tagName 모두 검색하기 때문.
+ * getElementById()를 사용할 때는 그럴 필요가 없다.
+ * 
+ */
+
+const loginButton = document.querySelector("#login-form button");
+
+
+function onLoginBtnClick(){
+    const username = loginInput.value
+    if (username === ""){
+        alert("Please write your name");
+    } else if( username.length > 15){
+        alert("Your name is too long.");
+    }
+}
+//  이렇게 하는 방법은 추천하지 않는다. html에서 required maxlength max로 제한둘 수 있음.
